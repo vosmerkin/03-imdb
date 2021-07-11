@@ -12,7 +12,7 @@ public class Menu {
 
         switch (i) {
             case (1): //
-
+                System.out.println("1 - Add entry");
             break;
             case (2):
 
