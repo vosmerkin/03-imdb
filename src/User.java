@@ -1,5 +1,6 @@
 import java.time.LocalDateTime;
 
+
 public class User {
     String name;
 
@@ -52,6 +53,10 @@ public class User {
 
     public String toString() {
         return name + " : " + surname + " : " + birthday.toString() + " : " + address.toString();
+    }
+
+    public void addEntry (String name, String surname,LocalDateTime birthday, String city, String street, Integer app){
+
     }
 
 }
