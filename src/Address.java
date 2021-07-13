@@ -32,4 +32,8 @@ public class Address {
     public void setApp(Integer app) {
         this.app = app;
     }
+
+    public String toString(){
+        return city + ":" + street + ":" + app.toString();
+    }
 }
