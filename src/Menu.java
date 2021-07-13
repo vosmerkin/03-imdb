@@ -10,7 +10,9 @@ public class Menu {
         System.out.println("9 - Quit");
         Scanner scanner = new Scanner(System.in);
         int i = scanner.nextInt();
+        scanner.close();
         return i;
+
 
 
     }
