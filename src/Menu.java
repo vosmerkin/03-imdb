@@ -1,6 +1,5 @@
 import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.util.List;
+import java.util.Comparator;
 import java.util.Scanner;
 
 public class Menu {
@@ -26,6 +25,10 @@ public class Menu {
                 case (3):
 
                     break;
+                case (4):
+                    this.search(imdb);
+imdb.db.c
+                    break;
                 case (6):
                         io.showOnScreen(imdb.db);
                     break;
@@ -42,6 +45,25 @@ public class Menu {
 
         }
         while (menuItem != 9);
+    }
+
+    class searchUserComp implements Comparator<User> {
+        @Override public int compare(User s1, User s2)
+        {
+            if (s1.getSid() == s2.getSid()) {
+                return 0;
+            }
+            else if (s1.getSid() > s2.getSid()) {
+                return 1;
+            }
+            else if (s1.getSid() < s2.getSid()) {
+                return -1;
+            }
+            return -1;
+        }
+    }
+    public void search(){
+
     }
 
     public Integer mainMenu() {
