@@ -1,4 +1,6 @@
-import java.time.LocalDateTime;
+import java.time.LocalDate;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 
 public class User {
@@ -6,11 +8,11 @@ public class User {
 
     String surname;
 
-    LocalDateTime birthday;
+    LocalDate birthday;
 
     Address address;
 
-    public User(String name, String surname, LocalDateTime birthday, Address address) {
+    public User(String name, String surname, LocalDate birthday, Address address) {
         this.name = name;
         this.surname = surname;
         this.birthday = birthday;
@@ -33,11 +35,11 @@ public class User {
         this.surname = surname;
     }
 
-    public LocalDateTime getBirthday() {
+    public LocalDate getBirthday() {
         return birthday;
     }
 
-    public void setBirthday(LocalDateTime birthday) {
+    public void setBirthday(LocalDate birthday) {
         this.birthday = birthday;
     }
 
@@ -52,10 +54,11 @@ public class User {
     }
 
     public String toString() {
-        return name + " : " + surname + " : " + birthday.toString() + " : " + address.toString();
+        return name + ":" + surname + ":" + birthday.format(DateTimeFormatter.ofPattern("yyyy-MM-dd")) + ":" + address.toString();
+
     }
 
-    public void addEntry (String name, String surname,LocalDateTime birthday, String city, String street, Integer app){
+    public void addEntry (String name, String surname, LocalDate birthday, String city, String street, Integer app){
 
     }
 
