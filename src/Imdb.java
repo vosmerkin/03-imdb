@@ -9,4 +9,8 @@ public class Imdb {
     public  void addEntry(User user) {
         db.add(user);
     }
+
+    public int[] searchUsers(String searchString){
+
+    }
 }

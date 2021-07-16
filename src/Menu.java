@@ -26,8 +26,8 @@ public class Menu {
 
                     break;
                 case (4):
-                    this.search(imdb);
-imdb.db.c
+                    this.search( imdb);
+
                     break;
                 case (6):
                         io.showOnScreen(imdb.db);
@@ -47,23 +47,28 @@ imdb.db.c
         while (menuItem != 9);
     }
 
-    class searchUserComp implements Comparator<User> {
-        @Override public int compare(User s1, User s2)
-        {
-            if (s1.getSid() == s2.getSid()) {
-                return 0;
-            }
-            else if (s1.getSid() > s2.getSid()) {
-                return 1;
-            }
-            else if (s1.getSid() < s2.getSid()) {
-                return -1;
-            }
-            return -1;
-        }
-    }
-    public void search(){
+//    class searchUserComp implements Comparator<User> {
+//        @Override public int compare(User s1, User s2)
+//        {
+//            if (s1.getSid() == s2.getSid()) {
+//                return 0;
+//            }
+//            else if (s1.getSid() > s2.getSid()) {
+//                return 1;
+//            }
+//            else if (s1.getSid() < s2.getSid()) {
+//                return -1;
+//            }
+//            return -1;
+//        }
+//    }
 
+
+    public void search(Imdb imdb){
+        System.out.println("Enter search string:");
+        String searchString = scanner.next();
+        int[] searchResults;
+        searchResults = imdb.searchUsers(searchString);
     }
 
     public Integer mainMenu() {
