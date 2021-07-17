@@ -58,7 +58,7 @@ public class User {
 
     }
 
-    public void addEntry (String name, String surname, LocalDate birthday, String city, String street, Integer app){
+    public void addEntry(String name, String surname, LocalDate birthday, String city, String street, Integer app) {
 
     }
 

@@ -3,7 +3,7 @@ public class Address {
     String street;
     Integer app;
 
-    public Address(String city, String street, int app){
+    public Address(String city, String street, int app) {
         this.city = city;
         this.street = street;
         this.app = app;
@@ -33,7 +33,7 @@ public class Address {
         this.app = app;
     }
 
-    public String toString(){
+    public String toString() {
         return city + ":" + street + ":" + app.toString();
     }
 }

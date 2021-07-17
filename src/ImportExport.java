@@ -9,15 +9,16 @@ import java.util.Map;
 
 public class ImportExport {
 
-    public List<User> importFromFile(String filename)  {
+    public List<User> importFromFile(String filename) {
         List<User> list = new ArrayList<>();
 
         try (BufferedReader in = new BufferedReader(new FileReader(new File(filename).getAbsoluteFile()))) {
             String s;
             String s1[];
             while ((s = in.readLine()) != null) {
-                s1= s.split(":");
-                list.add(new User (s1[0],s1[1], LocalDate.parse(s1[2], DateTimeFormatter.ofPattern("yyyy-MM-dd")), new Address(s1[3],s1[4],Integer.parseInt(s1[5]))));
+                s1 = s.split(":");
+                list.add(new User(s1[0], s1[1], LocalDate.parse(s1[2], DateTimeFormatter.ofPattern("yyyy-MM-dd")), new Address(s1[3], s1[4], Integer.parseInt(s1[5]))));
+                System.out.println(s);
             }
         } catch (IOException e) {
             System.out.println("File not found");
@@ -36,8 +37,6 @@ public class ImportExport {
             System.out.println(e.getMessage());
         }
     }
-
-
 
 
     public void showOnScreen(List<User> list) {
